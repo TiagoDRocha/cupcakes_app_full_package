@@ -1,0 +1,5 @@
+<!doctype html><html><head><meta charset="utf-8"><title>{{ produto.nome }}</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head><body>
+<a href="{{ url_for('main.index') }}">Voltar</a><h2>{{ produto.nome }}</h2><p>{{ produto.descricao }}</p><p>Preço: R$ {{ '%.2f'|format(produto.preco) }}</p>
+<form id="addForm"><label>Quantidade: <input type="number" name="quantidade" value="1" min="1"></label><button type="submit">Adicionar ao carrinho</button></form>
+<script>document.getElementById('addForm').addEventListener('submit', function(e){e.preventDefault();alert('Adicionado ao carrinho!');});</script>
+</body></html>
